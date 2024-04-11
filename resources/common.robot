@@ -75,7 +75,7 @@ Setup
     GoTo                  ${setup_url}
     ${login_status} =     IsText                      To access this page, you have to log in to Salesforce.    2
     Run Keyword If        ${login_status}             Login
-    GoTo                  ${setup_url}
+    GoTo                  ${setup_url}                #it's stupid, but it works.
     VerifyText    Setup Home
 
 
