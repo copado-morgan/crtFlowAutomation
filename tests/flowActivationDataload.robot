@@ -20,6 +20,7 @@ Activate Flow with ${flowLabel}
     ClickText            flowsModifiedToday
     VerifyNoText         Refresh this list to view the latest data
     UseTable             SortFlow API NameSorted AscendingColumn Actions
+    Wait                 1
     ClickCell            r?${flowLabel}/c11
     ClickText            View Details and Versions
     Wait                 2                           #seems to be a lag in rendering the table. Open to other ways to fix this
