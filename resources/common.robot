@@ -111,3 +111,17 @@ DeleteLeads
     VerifyNoText          Undo
     ClickText             Leads                    partial_match=False
 
+Activate Flow
+    [Documentation]    Used on a list view of flows. Activates a flow with the name ${label}, then returns to the flowsModifiedToday list view
+    [Arguments]          ${label}
+    UseTable             SortFlow API Name
+    Wait                 2
+    ClickCell            r?${label}/c11
+    ClickText            View Details and Versions
+    Wait                 2                           #seems to be a lag in rendering the version table. Open to other ways to fix this
+    ClickText            Activate                    ${label}
+    Wait                 3                        #usually a delay after activating the flow
+    ClickText            Back to List: Flows
+    QVision.ClickText    Flow Definitions            below=1
+    ClickText            flowsModifiedToday
+    VerifyNoText         Refresh this list to view the latest data
