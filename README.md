@@ -1,7 +1,7 @@
 # crtFlowAutomation
 
 Description:
-Unless you have test coverage for your salesforce flows, they deploy inactive to production. While the preferred scenario would be to have test coverage for flows, most organizations aren't at that point yet. This project is a collection of 2 Copado Robotic Testing scripts that will activate flows for you after deployment.
+Unless you have test coverage for your salesforce flows, they deploy inactive to production. While the preferred scenario would be to have test coverage for flows, most organizations aren't at that point yet. This project is a collection of 2 Copado Robotic Testing scripts that will activate flows for you after deployment. One relies on a list of flow names in an xlsx file. The other script scrapes the list of flows modified today and clicks activate for each one.
 
 Setup directions:
 
